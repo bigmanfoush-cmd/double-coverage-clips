@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Double Coverage Clips — Authorized</title>
+<style>
+:root{--bg:#17161a;--text:#f2f0ec;--text-muted:#a7a3ae;--accent:#e84444;--rule:#302e36}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{max-width:520px;width:100%}
+h1{font-size:1.6rem;margin:0 0 12px}
+p{color:var(--text-muted);line-height:1.6}
+.code-box{background:#1f1e24;border:1px solid var(--rule);border-radius:10px;padding:16px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;word-break:break-all;margin:16px 0}
+button{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:10px 18px;
+  font-size:14px;font-weight:600;cursor:pointer}
+button:active{opacity:.8}
+.err{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Authorization complete</h1>
+  <p id="msg">Reading the response…</p>
+  <div class="code-box" id="codeBox" style="display:none"></div>
+  <button id="copyBtn" style="display:none">Copy code</button>
+</div>
+<script>
+const params = new URLSearchParams(window.location.search);
+const code = params.get('code');
+const error = params.get('error');
+const msg = document.getElementById('msg');
+const box = document.getElementById('codeBox');
+const btn = document.getElementById('copyBtn');
+
+if (error) {
+  msg.textContent = 'TikTok returned an error: ' + error + (params.get('error_description') ? ' — ' + params.get('error_description') : '');
+  msg.className = 'err';
+} else if (code) {
+  msg.textContent = 'Copy this code and paste it back to Claude:';
+  box.textContent = code;
+  box.style.display = 'block';
+  btn.style.display = 'inline-block';
+  btn.onclick = () => navigator.clipboard.writeText(code).then(() => btn.textContent = 'Copied!');
+} else {
+  msg.textContent = 'No authorization code found in the URL.';
+  msg.className = 'err';
+}
+</script>
+</body>
+</html>
