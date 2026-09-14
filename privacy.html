@@ -1,0 +1,171 @@
+<title>Double Coverage Clips Privacy</title>
+<style>
+:root{
+  --bg:#17161a;
+  --bg-alt:#1f1e24;
+  --text:#f2f0ec;
+  --text-muted:#a7a3ae;
+  --accent:#e84444;
+  --rule:#302e36;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  padding-block:0 96px;
+}
+.wrap{
+  max-width:680px;
+  margin:0 auto;
+  padding:0 24px;
+}
+header{
+  padding-block:56px 40px;
+  border-bottom:1px solid var(--rule);
+  margin-bottom:48px;
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:600;
+  margin:0 0 14px;
+}
+h1{
+  font-family:'Big Shoulders Display',sans-serif;
+  font-weight:800;
+  font-size:clamp(2.2rem,6.5vw,3.4rem);
+  line-height:.98;
+  letter-spacing:.01em;
+  text-transform:uppercase;
+  margin:0 0 18px;
+  text-wrap:balance;
+}
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 24px;
+  color:var(--text-muted);
+  font-size:14px;
+}
+.meta strong{color:var(--text);font-weight:600}
+section{
+  display:grid;
+  grid-template-columns:64px 1fr;
+  gap:4px 24px;
+  padding-block:32px;
+  border-bottom:1px solid var(--rule);
+}
+section:last-of-type{border-bottom:none}
+.num{
+  font-family:'Big Shoulders Display',sans-serif;
+  font-weight:700;
+  font-size:2.2rem;
+  color:var(--accent);
+  line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+h2{
+  font-family:'Big Shoulders Display',sans-serif;
+  font-weight:700;
+  font-size:1.5rem;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  margin:2px 0 12px;
+}
+p{margin:0 0 12px;max-width:60ch}
+p:last-child{margin-bottom:0}
+ul{margin:0 0 12px;padding-left:20px;max-width:58ch}
+li{margin-bottom:6px}
+table{border-collapse:collapse;width:100%;max-width:58ch;margin-bottom:4px}
+th,td{text-align:left;padding:8px 12px 8px 0;border-bottom:1px solid var(--rule);font-size:14.5px;vertical-align:top}
+th{color:var(--text-muted);font-weight:600;letter-spacing:.02em;text-transform:uppercase;font-size:11px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+footer{
+  margin-top:48px;
+  padding-top:32px;
+  color:var(--text-muted);
+  font-size:14px;
+}
+footer a{color:var(--text)}
+@media (max-width:520px){
+  section{grid-template-columns:40px 1fr;gap:2px 14px}
+  .num{font-size:1.5rem}
+  th,td{padding-right:8px}
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Legal</p>
+    <h1>Double Coverage Clips — Privacy Policy</h1>
+    <div class="meta">
+      <span>Effective <strong>September 14, 2026</strong></span>
+      <span>Scope <strong>TikTok Content Posting API</strong></span>
+    </div>
+  </header>
+
+  <section>
+    <div class="num">01</div>
+    <div>
+      <h2>What this covers</h2>
+      <p>Double Coverage Clips ("the App") is a personal automation tool that publishes edited podcast highlight clips to one connected TikTok account. This policy explains what the App accesses through TikTok's API and how that access is used.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">02</div>
+    <div>
+      <h2>What is accessed</h2>
+      <table>
+        <tr><th>Data</th><th>Source</th><th>Purpose</th></tr>
+        <tr><td>OAuth access &amp; refresh tokens</td><td>TikTok login flow</td><td>Authorize video uploads to the connected account</td></tr>
+        <tr><td>Open ID, username, avatar</td><td>TikTok profile scope</td><td>Confirm which account is connected before posting</td></tr>
+        <tr><td>Upload status per video</td><td>TikTok Content Posting API</td><td>Confirm a clip published successfully</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">03</div>
+    <div>
+      <h2>What is never accessed</h2>
+      <p>The App never receives or stores a TikTok password. It does not read direct messages, contacts, browsing activity, or any account data outside the scopes listed above. No payment or financial information is collected.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">04</div>
+    <div>
+      <h2>Where data is stored</h2>
+      <p>OAuth tokens are stored locally, on the device the App runs on, encrypted at rest by the device's own filesystem protections. Nothing is uploaded to a third-party server, analytics platform, or ad network. No data is sold or shared with anyone.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">05</div>
+    <div>
+      <h2>Retention &amp; deletion</h2>
+      <p>Tokens are kept only as long as the App is actively used to post on the connected account. Disconnecting the App from TikTok's account settings immediately invalidates its access; the operator deletes the corresponding local token on the same request.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">06</div>
+    <div>
+      <h2>Contact</h2>
+      <p>Questions about this policy or a request to delete stored data — <a href="mailto:noahfoushee@icloud.com">noahfoushee@icloud.com</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    See also the <a href="./terms.html">Terms of Service</a>.
+  </footer>
+</div>
